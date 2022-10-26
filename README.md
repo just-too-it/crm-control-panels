@@ -24,5 +24,5 @@
 
 
 ## Deploy  
-
+https://crm-control-panels.vercel.app/
 
