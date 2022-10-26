@@ -1,1 +1,30 @@
 @import 'styles/helpers/variables';
+
+.home {
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+
+  /* Works on Firefox */
+  scrollbar-color: $color-cobalt transparent;
+  scrollbar-width: thin;
+
+  /* Works on Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-cobalt;
+    border-radius: 5px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  color: $color-black-titles;
+  margin-bottom: 16px;
+}
