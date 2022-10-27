@@ -1,0 +1,58 @@
+@import 'styles/helpers/variables';
+
+.submenu {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 48px;
+    transition: all 0.3s ease-in;
+}
+
+.item {
+    text-decoration: none;
+    font-weight: 600;
+    color: $color-black-titles;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.submenuItem {
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.submenuTitleOpen {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        right:0;
+        background: url('/assets/icons/triangle.png') no-repeat;
+        transition: all 0.3s ease-in;
+    }
+}
+
+.submenuTitleClose {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        right:0;
+        background: url('/assets/icons/triangle.png') no-repeat;
+        transition: all 0.3s ease-in;
+    }
+}

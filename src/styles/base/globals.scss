@@ -19,24 +19,24 @@ h1 {
 }
 
 .container {
-  max-width: 1406px;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-
-  outline: 1px solid tomato;
+  padding-left: 32px;
+  padding-right: 32px;
 
   @media (max-width: $desktop-width-max) {
-    max-width: 1086px;
+    max-width: 1120px;
   }
 
   @media (max-width: $tablet-width-max) {
-    max-width: 766px;
+    max-width: 800px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   @media (max-width: $mobile-width-max) {
-    max-width: 280px;
+    max-width: 310px;
   }
 }
 

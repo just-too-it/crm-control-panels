@@ -1,4 +1,55 @@
+@import 'styles/helpers/variables';
+
 .sidebar {
-    width: 268px;
-    flex-shrink: 0;
+  width: 268px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-box-shadow: 1px 0px 1px 0px rgba(2, 0, 96, 0.25);
+  -moz-box-shadow: 1px 0px 1px 0px rgba(2, 0, 96, 0.25);
+  box-shadow: 1px 0px 1px 0px rgba(2, 0, 96, 0.25);
+  padding-top: 24px;
+  
+  @media (max-width: $tablet-width-min) {
+    display: none;
+  }
+}
+
+.title {
+  font-weight: 700;
+  color: $color-black-titles;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.list {
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+  
+    /* Works on Firefox */
+    scrollbar-color: $color-cobalt transparent;
+    scrollbar-width: thin;
+  
+    /* Works on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-cobalt;
+      border-radius: 5px;
+      border-bottom-right-radius: 0px;
+      border-top-right-radius: 0px;
+    }
+}
+
+.item {
+    height: 32px;
+    margin-bottom: 40px;
+}
+
+.itemSubmenu {
+    height: auto;
+    cursor: pointer;
 }
