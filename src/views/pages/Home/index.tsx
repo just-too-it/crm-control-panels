@@ -7,9 +7,9 @@ import styles from './Home.module.scss';
 
 export const Home = () => {
   return (
-    <section className={clsx(styles.home, 'container')}>
+    <section className={styles.home}>
       <h1 className={styles.title}>Новости</h1>
-      <NewsList news={mockNews}/>
+      <NewsList news={mockNews} />
     </section>
   );
 };

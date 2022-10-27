@@ -6,7 +6,7 @@ import { NewsListProps } from './NewsList.types'
 
 export const NewsList: FC<NewsListProps> = ({ news }) => {
   return (
-    <ul className='list' >
+    <ul className={styles.list} >
         {
             news.map((news) => <li key={news.id}><News id={news.id} title={news.title} body={news.body}  /></li>)
         }

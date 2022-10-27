@@ -3,6 +3,8 @@
 .home {
   height: calc(100vh - 80px);
   overflow-y: scroll;
+  margin-left: 0;
+  margin-top: 32px;
 
   /* Works on Firefox */
   scrollbar-color: $color-cobalt transparent;

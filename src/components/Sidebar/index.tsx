@@ -1,7 +1,8 @@
 import React from 'react'
+import styles from './Sidebar.module.scss'
 
 export const SideBar = () => {
   return (
-    <div>SideBar</div>
+    <div className={styles.sidebar}>SideBar</div>
   )
 }

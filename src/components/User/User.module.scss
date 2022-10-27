@@ -1,0 +1,12 @@
+@import 'styles/helpers/variables';
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-weight: 700;
+  color: $color-white;
+  margin-left: 16px;
+}
