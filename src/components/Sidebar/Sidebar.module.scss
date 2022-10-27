@@ -18,14 +18,18 @@
 
 .title {
   font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
   color: $color-black-titles;
   margin: 0;
-  margin-bottom: 32px;
+  margin-bottom: 27px;
 }
 
 .list {
+    padding-top: 5px;
     height: calc(100vh - 80px);
     overflow-y: scroll;
+    overflow-x: hidden;
   
     /* Works on Firefox */
     scrollbar-color: $color-cobalt transparent;
@@ -45,6 +49,7 @@
 }
 
 .item {
+    min-width: 268px;
     height: 32px;
     margin-bottom: 40px;
 }
@@ -53,3 +58,5 @@
     height: auto;
     cursor: pointer;
 }
+
+

@@ -17,27 +17,30 @@
     gap: 16px;
 }
 
-.submenuItem {
-    margin-bottom: 32px;
-
-    &:last-child {
-        margin-bottom: 0px;
-    }
-}
-
-.submenuTitleOpen {
+.itemCurrent {
     position: relative;
 
     &::after {
         position: absolute;
         content: '';
-        width: 15px;
-        height: 15px;
+        width: 6px;
+        height: 37px;
         top: 50%;
         transform: translateY(-50%);
-        right:0;
-        background: url('/assets/icons/triangle.png') no-repeat;
+        right: 7px;
+        background: $color-cobalt;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        z-index: 1;
         transition: all 0.3s ease-in;
+    }
+}
+
+.submenuItem {
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 0px;
     }
 }
 
@@ -50,8 +53,24 @@
         width: 15px;
         height: 15px;
         top: 50%;
+        transform: translateY(-50%);
+        right:20px;
+        background: url('/assets/icons/triangle.png') no-repeat;
+        transition: all 0.3s ease-in;
+    }
+}
+
+.submenuTitleOpen {
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        top: 50%;
         transform: translateY(-50%) rotate(180deg);
-        right:0;
+        right:20px;
         background: url('/assets/icons/triangle.png') no-repeat;
         transition: all 0.3s ease-in;
     }

@@ -9,12 +9,12 @@ const sidebarItemsSubmenu: SidebarItemProps[] = [
     {
         title: 'Настройки профиля',
         icon: <ProfileIcon width={28} height={32} stroke={'#1C1C1E'}/>,
-        link: PagesLinks.MOCK_PAGE
+        link: ''
     },
     {
         title: 'Управление финансами',
         icon: <FinanceIcon width={32} height={32} fill={'#1C1C1E'}/>,
-        link: PagesLinks.MOCK_PAGE
+        link: ''
     }
 ]
 
@@ -32,22 +32,22 @@ export const sidebarItems: SidebarItemProps[] = [
     {
         title: 'Таблицы',
         icon: <TablesIcon width={32} height={32} fill={'#1C1C1E'}/>,
-        link: PagesLinks.MOCK_PAGE
+        link: ''
     },
     {
         title: 'Календарь',
         icon: <CalendarIcon width={32} height={32} fill={'#1C1C1E'}/>,
-        link: PagesLinks.MOCK_PAGE
+        link: ''
     },
     {
         title: 'Карты',
         icon: <MapIcon width={25} height={32} fill={'#1C1C1E'}/>,
-        link: PagesLinks.MOCK_PAGE
+        link: ''
     },
     {
         title: 'Виджеты',
         icon: <WidgetIcon width={32} height={30} fill={'#1C1C1E'}/>,
-        link: PagesLinks.MOCK_PAGE
+        link: ''
     },
     {
         title: 'Настройки',
@@ -58,7 +58,7 @@ export const sidebarItems: SidebarItemProps[] = [
     {
         title: 'Выход',
         icon: <LogoutIcon width={32} height={30} fill={'#000000'}/>,
-        link: PagesLinks.MOCK_PAGE
+        link: ''
     }
 ]
 

@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import React, { FC, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import styles from './SidebarItem.module.scss';
 import { SidebarItemProps } from './SidebarItem.types';
@@ -9,6 +9,7 @@ export const SidebarItem: FC<{ item: SidebarItemProps }> = (props) => {
   const { icon, title, link, isSubmenu = false, submenu } = props.item;
   const submenuRef = useRef<HTMLUListElement>(null);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false)
+  const location = useLocation()
 
   const handleSubmenu = () => {
     if (submenuRef.current.style.height == '') {
@@ -28,7 +29,7 @@ export const SidebarItem: FC<{ item: SidebarItemProps }> = (props) => {
   return (
     <>
       {!isSubmenu ? (
-        <Link to={link} className={styles.item} title={title}>
+        <Link to={link} className={clsx(styles.item, location.pathname===link && styles.itemCurrent)} title={title}>
           {icon} {title}
         </Link>
       ) : (
