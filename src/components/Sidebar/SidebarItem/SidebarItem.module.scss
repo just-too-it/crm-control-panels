@@ -27,11 +27,12 @@
     height: 37px;
     top: 50%;
     transform: translateY(-50%);
-    right: 7px;
+    right: 0;
     background: $color-cobalt;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     transition: all 0.3s ease-in;
+    visibility: visible !important;
   }
 }
 
