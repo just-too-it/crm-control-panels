@@ -1,9 +1,10 @@
+import React from 'react';
 import clsx from 'clsx';
+import { Link, useLocation } from 'react-router-dom';
+
 import { LogoIcon } from 'components/icons';
 import { User } from 'components/User';
 import { PagesLinks } from 'core/constants/pagesLinks';
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
 
 import styles from './Header.module.scss';
 

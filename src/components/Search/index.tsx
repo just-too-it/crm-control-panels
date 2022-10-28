@@ -1,10 +1,12 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Formik, Form, Field, FormikHelpers } from 'formik';
+import * as yup from 'yup';
 
-import styles from './Search.module.scss';
 import { postData } from 'service/postData';
 import { ADDRESS_COUNT, TOKEN, URL } from 'core/constants/API';
 import { SearchIcon } from 'components/icons';
+
+import styles from './Search.module.scss';
 
 export const Search = ({ getData }) => {
   interface Values {
@@ -15,11 +17,16 @@ export const Search = ({ getData }) => {
     query: '',
   };
 
+  const validationSchema: unknown = yup.object().shape({
+    query: yup.string().min(3, 'Минимальное количество символов: 3'),
+  });
+
   return (
     <Formik
       initialValues={initValues}
       validateOnChange={true}
       validateOnBlur={false}
+      validationSchema={validationSchema}
       onSubmit={(values: Values, { setSubmitting }: FormikHelpers<Values>) => {
         setTimeout(async () => {
           const addresses = await postData(URL, TOKEN, values.query, ADDRESS_COUNT);
@@ -28,13 +35,21 @@ export const Search = ({ getData }) => {
         }, 500);
       }}
     >
-      <Form className={styles.form}>
-        <Field type="text" id={'query'} name={'query'} className={styles.input} placeholder={'Введите интересующий вас адрес'}/>
-        <button type="submit" className={styles.button}>
-          <SearchIcon width={32} height={32} fill={'white'} />
-          Поиск
-        </button>
-      </Form>
+      {({ isValid, dirty }) => (
+        <Form className={styles.form}>
+          <Field
+            type="text"
+            id={'query'}
+            name={'query'}
+            className={styles.input}
+            placeholder={'Введите интересующий вас адрес'}
+          />
+          <button type="submit" className={styles.button} disabled={!(isValid && dirty)}>
+            <SearchIcon width={32} height={32} fill={'white'} />
+            Поиск
+          </button>
+        </Form>
+      )}
     </Formik>
   );
 };

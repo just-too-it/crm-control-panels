@@ -11,7 +11,12 @@ export const AddressList: FC<SuggestionsDTO> = ({ suggestions }) => {
         <section className={styles.addresses}>
           <h2 className={styles.title}>Адреса</h2>
           <ul className={styles.list}>
-            {suggestions && suggestions.map((address) => <li key={address.value} className={styles.item}>{address.value}</li>)}
+            {suggestions &&
+              suggestions.map((address) => (
+                <li key={address.value} className={styles.item}>
+                  {address.value}
+                </li>
+              ))}
           </ul>
         </section>
       )}

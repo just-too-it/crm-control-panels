@@ -1,12 +1,12 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import clsx from 'clsx';
 
 import { Header } from 'components/Header';
 import { Sidebar } from 'components/Sidebar';
+import { sidebarItems } from 'core/constants/sidebar';
 
 import styles from './Layout.module.scss';
-import clsx from 'clsx';
-import { sidebarItems } from 'core/constants/sidebar';
 
 export const Layout = () => {
   return (

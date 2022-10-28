@@ -18,8 +18,8 @@
   &::-webkit-scrollbar-thumb {
     background-color: $color-cobalt;
     border-radius: 5px;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
   }
 
   @media (max-width: $mobile-width-max) {

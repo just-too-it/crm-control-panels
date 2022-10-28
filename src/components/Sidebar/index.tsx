@@ -1,8 +1,10 @@
-import clsx from 'clsx';
 import React, { FC } from 'react';
-import styles from './Sidebar.module.scss';
+import clsx from 'clsx';
+
 import { SidebarProps } from './Sidebar.types';
 import { SidebarItem } from './SidebarItem';
+
+import styles from './Sidebar.module.scss';
 
 export const Sidebar: FC<SidebarProps> = ({ items }) => {
   return (

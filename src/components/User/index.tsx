@@ -1,8 +1,9 @@
-import { PersonIcon } from 'components/icons';
 import React, { FC } from 'react';
 
-import styles from './User.module.scss';
+import { PersonIcon } from 'components/icons';
 import { UserProps } from './UserProps.types';
+
+import styles from './User.module.scss';
 
 export const User: FC<UserProps> = ({ name, avatar }) => {
   return (

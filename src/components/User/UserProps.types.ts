@@ -1,4 +1,4 @@
 export type UserProps = {
-    name?: string;
-    avatar?: string;
-}
+  name?: string;
+  avatar?: string;
+};
