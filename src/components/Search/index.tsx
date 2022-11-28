@@ -3,7 +3,6 @@ import { Formik, Form, Field, FormikHelpers } from 'formik';
 import * as yup from 'yup';
 
 import { postData } from 'service/postData';
-import { ADDRESS_COUNT, TOKEN, URL } from 'core/constants/API';
 import { SearchIcon } from 'components/icons';
 
 import styles from './Search.module.scss';
@@ -29,7 +28,7 @@ export const Search = ({ getData }) => {
       validationSchema={validationSchema}
       onSubmit={(values: Values, { setSubmitting }: FormikHelpers<Values>) => {
         setTimeout(async () => {
-          const addresses = await postData(URL, TOKEN, values.query, ADDRESS_COUNT);
+          const addresses = await postData(process.env.REACT_APP_API, process.env.REACT_APP_TOKEN, values.query, Number(process.env.REACT_APP_COUNT));
           getData(addresses);
           setSubmitting(false);
         }, 500);
